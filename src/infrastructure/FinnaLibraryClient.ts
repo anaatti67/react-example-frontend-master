@@ -35,7 +35,7 @@ export class FinnaLibraryClient implements BookSearcher {
       ['lookfor', lookFor],
       ['type', 'AllFields'],
       ['field[]', 'title'],
-      //added authors field currently breaks the app
+      //added authors field to the query params
       ['field[]', 'authors'],
       ['field[]', 'cleanIsbn'],
       ['field[]', 'year'],

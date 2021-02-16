@@ -16,7 +16,11 @@ const BookListItem: React.FunctionComponent<BookListItemProps> = ({
       .join(' ')}
   >
     <span className="flex-1 font-medium">{book.title}</span>
-    <span className="flex-1 font-medium">{book.authors}</span>
+    <span className="flex-1 font-medium">
+      {[book.authors.primary].map((x, y) => (
+        <span key={y}>{Object.keys(x != null)}</span>
+      ))}
+    </span>
     <span className="flex-1 font-normal ml-5">{book.year}</span>
     <span className="flex-1">{book.isbn}</span>
   </div>
